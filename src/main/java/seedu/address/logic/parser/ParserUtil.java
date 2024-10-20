@@ -139,7 +139,8 @@ public class ParserUtil {
         return tagSet;
     }
 
-    public static Name parseEvent(String event) throws ParseException {
+    /*
+    public static Event parseEvent(String event) throws ParseException {
         requireNonNull(event);
         String trimmedEvent = event.trim();
         if (!Name.isValidName(trimmedEvent)) {
@@ -147,4 +148,5 @@ public class ParserUtil {
         }
         return new Name(trimmedEvent);
     }
+    */
 }

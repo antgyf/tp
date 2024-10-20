@@ -11,7 +11,7 @@ import seedu.address.model.types.common.EventTagContainsKeywordsPredicate;
 
 /**
  * Finds and lists all events in address book who has a tag with a name containing any of the argument keywords.
- * Keyword matching is case insensitive.
+ * Keyword matching is case-insensitive.
  */
 public class SearchEventCommand extends Command {
     public static final String COMMAND_WORD = "search";

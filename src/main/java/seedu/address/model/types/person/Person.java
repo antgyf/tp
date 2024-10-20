@@ -115,7 +115,7 @@ public class Person {
                 && email.equals(otherPerson.email)
                 && address.equals(otherPerson.address)
                 && tags.equals(otherPerson.tags)
-                && event.equals(otherPerson.event);
+                && (((event == null) && (otherPerson.event == null)) || event.equals(otherPerson.event));
     }
 
     @Override

@@ -18,7 +18,7 @@ import seedu.address.logic.commands.HelpCommand;
 import seedu.address.logic.commands.personcommands.AddPersonCommand;
 import seedu.address.logic.commands.personcommands.DeletePersonCommand;
 import seedu.address.logic.commands.personcommands.EditCommand;
-import seedu.address.logic.commands.personcommands.EditCommand.EditPersonDescriptor;
+import seedu.address.commons.util.EditPersonDescriptor;
 import seedu.address.logic.commands.personcommands.ExitCommand;
 import seedu.address.logic.commands.personcommands.FindCommand;
 import seedu.address.logic.commands.personcommands.ListCommand;

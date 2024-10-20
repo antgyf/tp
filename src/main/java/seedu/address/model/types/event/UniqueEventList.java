@@ -45,6 +45,16 @@ public class UniqueEventList implements Iterable<Event> {
         return internalList.stream().anyMatch(event -> event.getName().equals(name));
     }
 
+    public Event getEventByName(String name) {
+        requireNonNull(name);
+        for (Event event : internalList) {
+            if (event.getName().fullName.equals(name)) {
+                return event;
+            }
+        }
+        return null;
+    }
+
     /**
      * Adds an event to the list.
      * The event must not already exist in the list.
@@ -156,4 +166,5 @@ public class UniqueEventList implements Iterable<Event> {
         }
         return true;
     }
+
 }

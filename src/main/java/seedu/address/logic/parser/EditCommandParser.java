@@ -12,9 +12,9 @@ import java.util.Set;
 import seedu.address.commons.core.index.Index;
 import seedu.address.logic.commands.Command;
 import seedu.address.logic.commands.eventcommands.EditEventCommand;
-import seedu.address.logic.commands.eventcommands.EditEventCommand.EditEventDescriptor;
+import seedu.address.commons.util.EditEventDescriptor;
 import seedu.address.logic.commands.personcommands.EditCommand;
-import seedu.address.logic.commands.personcommands.EditCommand.EditPersonDescriptor;
+import seedu.address.commons.util.EditPersonDescriptor;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.tag.Tag;
 
@@ -71,9 +71,12 @@ public class EditCommandParser implements Parser<Command> {
         }
         parseTagsForEdit(argMultimap.getAllValues(PREFIX_TAG)).ifPresent(editPersonDescriptor::setTags);
 
+        /*
         if (argMultimap.getValue(PREFIX_EVENT).isPresent()) {
             editPersonDescriptor.setEvent(ParserUtil.parseEvent(argMultimap.getValue(PREFIX_EVENT).get()));
         }
+
+         */
 
         if (!editPersonDescriptor.isAnyFieldEdited()) {
             throw new ParseException(EditCommand.MESSAGE_NOT_EDITED);

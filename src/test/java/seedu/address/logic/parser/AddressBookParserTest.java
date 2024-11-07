@@ -260,6 +260,6 @@ public class AddressBookParserTest {
 
     @Test
     public void getHint_unrecognizedCommandHint() {
-        assertEquals(HelpCommand.MESSAGE_USAGE, parser.getHint("unknown"));
+        assertEquals(HelpCommand.MESSAGE_USAGE, parser.getHint("UNKNOWN"));
     }
 }

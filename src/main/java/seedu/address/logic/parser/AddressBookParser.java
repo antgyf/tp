@@ -165,6 +165,8 @@ public class AddressBookParser {
             }
         } else if (userInput.startsWith("c")) {
             return getClearHint(userInput);
+        } else if (userInput.startsWith(("u"))) {
+            return UnlinkPersonCommand.MESSAGE_USAGE;
         } else {
             return HelpCommand.MESSAGE_USAGE;
         }
